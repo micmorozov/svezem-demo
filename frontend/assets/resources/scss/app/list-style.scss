@@ -1,0 +1,21 @@
+.list-ol-decimal {
+  ol {
+    list-style-type: none;
+    counter-reset: item;
+    padding-left: 0;
+  }
+
+  li {
+    display: block;
+
+    &::before {
+      counter-increment: item;
+      content: counters(item, ".") " ";
+      position: absolute;
+    }
+
+    p, table {
+      margin-left: 36px;
+    }
+  }
+}

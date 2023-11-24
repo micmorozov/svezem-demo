@@ -1,0 +1,18 @@
+{
+  "name": "svezem_app",
+  "version": "1.0.0",
+  "description": "Отправка данных по сокету",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "redis": "^2.6.2",
+    "socket.io": "^1.4.8",
+    "forever": "^0.15.1"
+  },
+  "preferGlobal": true
+}

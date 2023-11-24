@@ -1,0 +1,204 @@
+.front-page
+	&.type
+		.header
+			margin-bottom: 55px
+			padding-bottom: 0
+			&__menu-wrap
+				position: static
+				margin: 30px auto 40px
+			&__form-wrap
+				position: static
+		.content
+			&__title
+				&:after
+					display: none
+	.transporation-2
+		&.companies 
+			.item
+				&__name
+					margin-bottom: 15px
+				&__sphere
+					padding: 10px 0
+				&__ratting
+					padding: 15px 0 
+					color: #252525
+				.rating
+					margin-right: 15px
+					&__details
+						white-space: nowrap
+				&__contact-info
+					padding-top: 0px
+				&__block
+					&:last-child
+						padding: 0
+				.desc__btn-wrap
+					padding: 15px 0
+				.desc__contact
+					flex: 1
+					background-color: rgba(187,222,251,0.2)
+					padding: 0 15px
+					.contact-item
+						display: flex
+						padding: 10px 0
+						&__address
+							padding-right: 35px
+						&__phone
+							white-space: nowrap
+							font-weight: 700
+						&+ .contact-item
+							border-top: 1px dashed #d7d7d7
+	.carriage-types
+		&__title-wrap
+			display: flex
+			align-items: center
+			margin-bottom: 35px
+			.content__title
+				margin-bottom: 0
+				margin-right: 35px
+		&__direction
+			&:hover
+				text-decoration: underline
+
+
+.content
+	.post-type
+		margin-bottom: 35px
+	.posts-type
+		margin-bottom: 45px
+		&__news
+			margin: 0 0 45px
+			padding: 45px 0
+			border-bottom: 1px dashed #d7d7d7
+			border-top: 1px dashed #d7d7d7
+		.news
+			margin: 0 -15px
+			&__item
+				display: flex
+				padding: 10px 15px
+			&__header
+				color: $red
+				font-size: 16px
+				margin-bottom: 10px
+			&__title
+				font-weight: 700
+				text-transform: uppercase
+				margin-bottom: 15px
+			&__link
+				color: $blue
+				&:hover
+					text-decoration: underline
+			&__img
+				min-width: 165px
+				width: 165px
+				height: 113px
+				background-size: cover
+				background-position: center
+				margin-right: 10px
+
+.container.carrier 
+	.services 
+		.item
+			&__excerpt 
+				p
+					max-height: 100%
+					overflow: unset
+					display: block
+
+@media (min-width: 768px) and (max-width: 991px)
+	.front-page
+		&.type
+			.content
+				.posts-type
+					&__news
+						padding: 0
+					.news
+						&__item
+							width: 100%
+							padding: 35px 20% 35px 15px
+							border-bottom: 1px dashed #d7d7d7
+							&:last-child
+								border: none
+							p
+								margin-bottom: 0
+		.transporation-2
+			&.companies 
+				.item
+					.desc__contact
+						background-color: #fff
+						padding: 0 15px
+						border-top: 1px dashed #d7d7d7
+						.contact-item
+							display: flex
+							padding: 10px 0
+							&__address
+								width: 50%
+							&__phone
+								width: 50%
+							&+ .contact-item
+								border-top: none
+					&__ratting
+						padding-left: 113px
+
+
+@media (min-width: 320px) and (max-width: 767px)
+	.front-page
+		&.type
+			.content
+				.posts-type
+					&__news
+						margin: 0
+						padding: 0
+						border-bottom: none
+					.news
+						&__img
+							min-width: 100px
+							width: 100px
+							height: 68px
+						p
+							display: none
+						&__item
+							padding: 15px 0
+							margin: 0 10px 15px
+							border-top: 1px dashed #d7d7d7
+							border-bottom: 1px dashed #d7d7d7
+						&__header
+							font-size: 14px
+						&__link
+							font-size: 12px
+		.transporation-2
+			&.companies
+				.item
+					&__name
+						margin-bottom: 0
+					&__details
+						align-self: center
+					&__ratting
+						padding: 15px
+						font-size: 12px
+						.rating
+							margin-right: 5px
+					&__block:last-child 
+						.desc__price
+							justify-content: flex-start
+							padding: 15px
+					.desc__contact
+						background-color: #fff
+						border-top: 1px solid #bdbdbd
+						border-bottom: 1px solid #bdbdbd
+						margin: 0 10px
+						padding: 0
+						.contact-item
+							flex-direction: column
+							padding: 0
+							&__address
+								border-bottom: 1px dashed #d7d7d7
+								padding: 4px 0
+							&__phone
+								padding: 4px 0
+								.phone
+									color: #4aa846
+					.desc__btn-wrap
+						border-top: none
+		.carriage-types
+			&__title-wrap
+				flex-wrap: wrap

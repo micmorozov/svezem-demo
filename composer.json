@@ -1,0 +1,98 @@
+{
+  "name": "yiisoft/yii2-app-advanced",
+  "description": "Yii 2 Advanced Project Template",
+  "keywords": [
+    "yii2",
+    "framework",
+    "advanced",
+    "project template"
+  ],
+  "homepage": "http://www.yiiframework.com/",
+  "type": "project",
+  "license": "BSD-3-Clause",
+  "support": {
+    "issues": "https://github.com/yiisoft/yii2/issues?state=open",
+    "forum": "http://www.yiiframework.com/forum/",
+    "wiki": "http://www.yiiframework.com/wiki/",
+    "irc": "irc://irc.freenode.net/yii",
+    "source": "https://github.com/yiisoft/yii2"
+  },
+  "minimum-stability": "stable",
+  "require": {
+    "yiisoft/yii2": ">=2.0.6",
+    "yiisoft/yii2-bootstrap": "*",
+    "yiisoft/yii2-swiftmailer": "*",
+    "yiisoft/yii2-imagine": "~2.0.0",
+    "2amigos/yii2-selectize-widget": "~1.0",
+    "2amigos/yii2-date-picker-widget": "~1.0",
+    "2amigos/yii2-file-upload-widget": "~1.0",
+    "rmrevin/yii2-fontawesome": "3.3.0",
+    "newerton/yii2-fancybox": "dev-master",
+    "yiisoft/yii2-redis": "*",
+    "guzzlehttp/guzzle": "*",
+    "2amigos/yii2-editable-widget": "^0.1.4",
+    "vova07/yii2-imperavi-widget": "*",
+    "dompdf/dompdf": "dev-master",
+    "micmorozov/yii2-gearman": "dev-master",
+    "udokmeci/yii2-phone-validator" : "dev-master",
+    "kartik-v/yii2-widget-select2": "2.1.4",
+    "ferrumfist/yii2-recaptcha-widget" : "*",
+    "yii2mod/yii2-comments": "*",
+    "mohorev/yii2-upload-behavior": "*",
+    "wapmorgan/morphos": "^3.2",
+    "mdmsoft/yii2-admin": "dev-master",
+    "twig/twig": "^2.4",
+    "2amigos/yii2-tinymce-widget": "~1.1",
+    "execut/yii2-widget-bootstraptreeview": "dev-master",
+    "yandex/geo": "^1.1",
+    "wamania/php-stemmer": "^1.2",
+    "simialbi/yii2-schema-org": "^1.2",
+    "yii2tech/ar-linkmany": "*",
+    "yiisoft/yii2-sphinx": "~2.0.0",
+    "phpoffice/phpspreadsheet": "~1.12",
+    "samdark/sitemap": "^2.2",
+    "umanskyi31/opengraph": "^1.1",
+    "ps/image-optimizer": "^1.2",
+    "yii2mod/yii2-star-rating": "*",
+    "zaininnari/html-minifier": "*",
+    "psr/http-client": "*",
+    "psr/http-message": "*",
+    "vkcom/vk-php-sdk": "^5.101",
+    "longman/telegram-bot": "*",
+    "endroid/qr-code": "*",
+    "monolog/monolog": "^1.0",
+    "ext-json": "*",
+    "ext-redis": "*",
+    "ext-openssl": "*"
+  },
+  "require-dev": {
+    "codeception/codeception": "*",
+    "yiisoft/yii2-debug": "*",
+    "yiisoft/yii2-gii": "*",
+    "yiisoft/yii2-faker": "*"
+  },
+  "config": {
+    "process-timeout": 1800,
+    "fxp-asset": {
+      "enabled": false
+    }
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/ferrumfist/Morphos"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Svezem\\": "./src"
+    }
+  },
+  "scripts": {
+    "build-assets": "php yii asset ./frontend/assets/build.php ./frontend/config/assets.prod.php"
+  }
+}

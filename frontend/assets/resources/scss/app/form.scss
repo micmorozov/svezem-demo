@@ -1,0 +1,245 @@
+.auth {
+
+  &__title {
+    &__wrap {
+      display: flex;
+      align-items: center;
+      margin-bottom: 35px;
+
+      .content__title {
+        margin-bottom: 0;
+      }
+
+      .line {
+        flex: 1;
+        height: 1px;
+        border: 1px dashed #d7d7d7;
+        margin: 8px 0 0px 20px;
+      }
+    }
+  }
+
+  &__block {
+    .form {
+      &__field {
+        margin-bottom: 15px;
+        position: relative;
+
+        &.checkboxs-wrap {
+          display: flex;
+
+          .checkbox-wrap + .checkbox-wrap {
+            margin-top: 15px;
+          }
+        }
+
+        &.btn-wrap {
+          margin-left: 150px;
+        }
+
+        input[type='checkbox'] {
+          display: none;
+
+          & + label {
+            font-weight: 400;
+            color: #252525;
+
+            span {
+              display: inline-block;
+              width: 22px;
+              height: 22px;
+              border-radius: 4px;
+              border: 2px solid #e3e4eb;
+              margin-right: 15px;
+              background-color: #FFF;
+              position: relative;
+              cursor: pointer;
+              vertical-align: middle;
+
+              &:before {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translateY(-50%) translateX(-50%);
+                width: 13px;
+                height: 10px;
+                background-image: url("../img/icons/check.png");
+                opacity: 0;
+              }
+            }
+          }
+
+          &:checked {
+            & + label {
+              span {
+                &:before {
+                  opacity: 1;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &__label {
+        width: 150px;
+      }
+
+      &-forget-pass {
+        &__link {
+          margin-left: 15px;
+          text-decoration: underline;
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+
+      &-custom {
+        &-input,
+        &-button {
+          width: 100%;
+          max-width: 300px;
+        }
+      }
+    }
+
+    .regi {
+      max-width: 300px;
+      width: 100%;
+      text-align: center;
+      margin-left: 150px;
+
+      &__link {
+        text-decoration: underline;
+        color: $red;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .auth {
+    &__block {
+      .form {
+        &__label {
+          position: absolute;
+          top: 0;
+          left: 0;
+          padding: 12px;
+          line-height: inherit;
+          background-color: #e3e4eb;
+          min-width: 100px;
+          width: 100px;
+          text-align: center;
+          -webkit-border-radius: 20px;
+          -moz-border-radius: 20px;
+          -ms-border-radius: 20px;
+          border-radius: 20px;
+          z-index: 1;
+          font-size: 12px;
+
+          &.mobile-not {
+            position: static;
+            background-color: transparent;
+            text-align: left;
+            max-width: 300px;
+            width: 100%;
+            padding: 0;
+            margin-bottom: 15px;
+            font-size: 14px;
+            font-weight: 700;
+          }
+
+          &.email {
+            font-size: 11px;
+            padding: 5px 12px;
+          }
+
+          & + input {
+            padding-left: 105px;
+          }
+        }
+
+        &-forget-pass__link {
+          display: block;
+          max-width: 300px;
+          width: 100%;
+          text-align: center;
+          margin: 10px 0 0;
+        }
+
+        &__field {
+          &.checkboxs-wrap {
+            flex-direction: column;
+          }
+
+          &.btn-wrap {
+            margin-left: 0;
+          }
+        }
+      }
+
+      .regi {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+.tooltip.fade.top.in {
+  opacity: 1 !important;
+  width: 100%;
+  max-width: 440px;
+  max-height: 0;
+
+  //top: -53px
+  display: flex;
+  align-items: flex-end;
+}
+
+.tooltip.top .tooltip-arrow {
+  margin: 0 auto;
+  position: relative !important;
+  left: 0 !important;
+  bottom: -45px;
+  display: none;
+}
+
+.tooltip-inner {
+  margin: 0 auto;
+  position: relative;
+}
+
+.error-wrapper {
+  max-width: 440px;
+  display: inline-block;
+  width: 100%;
+
+  &__long {
+    max-width: 100%;
+
+    .tooltip.fade.top.in {
+      max-width: 100%;
+    }
+  }
+}
+
+.add-offer-block .form-field .part.price .tooltip.fade.top.in {
+  top: -23px;
+}
+
+.tooltip.download.fade.top.in {
+  top: (-73px) !important;
+}
+
+.tooltip-inner {
+  min-width: 200px;
+}

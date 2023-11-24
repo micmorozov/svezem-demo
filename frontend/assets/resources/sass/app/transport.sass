@@ -1,0 +1,349 @@
+.transport
+  padding: 20px 0
+  &__title
+    font-size: 16px
+    line-height: 30px
+    color: #252525
+    font-weight: 700
+    position: relative
+    display: inline-block
+    padding: 0 15px
+    text-transform: uppercase
+    .status
+      font-weight: 400
+      margin-left: 20px
+      text-transform: lowercase
+      color: #ef0e14
+  &__title-wrap
+    display: flex
+    margin-bottom: 35px
+    .line
+      flex: 1
+      height: 1px
+      border: 1px dashed #d7d7d7
+      align-self: flex-end
+      margin: 0 0 4px 10px
+  &-regdate
+    white-space: nowrap
+    padding: 2px 0
+
+  .tags
+    margin-bottom: 40px
+    .content__title
+      margin-bottom: 25px
+  .main-block
+    overflow: hidden
+    margin-bottom: 55px
+    &__phone
+      color: #3e99dd
+      strong
+        color: #252525
+    &__info-details
+      flex: 1
+    &__info
+      display: -webkit-box
+      display: -ms-flexbox
+      display: flex
+      padding: 25px 0px
+      margin: 0 15px
+      border-bottom: 1px dashed #d7d7d7
+    &__bottom-bar
+      border: 1px solid rgba(62, 153, 221, 0.15)
+      padding: 13px 15px
+      display: -webkit-box
+      display: -ms-flexbox
+      display: flex
+      -webkit-box-pack: justify
+      -ms-flex-pack: justify
+      justify-content: space-between
+      -webkit-box-align: center
+      -ms-flex-align: center
+      align-items: center
+    &-details
+      color: #252525
+      table
+        width: inherit
+      td
+        padding: 0 10px 15px 0
+        &.phone
+          color: $blue
+          span
+            white-space: nowrap
+      &__item
+        margin-bottom: 15px
+        strong
+          display: inline-block
+          width: 70px
+      &__website,
+      &__contacts
+        a
+          text-decoration: underline
+          &:hover
+            text-decoration: none
+      &__website
+        margin-bottom: 10px
+    &__img-wrap
+      background: #fff no-repeat 50% 50%
+      background-size: auto
+      min-width: 198px
+      height: 198px
+      box-shadow: 0 2px 7px rgba(40, 42, 47, 0.2)
+      border: 1px solid #3e99dd
+      overflow: hidden
+      margin: 0 50px 0 15px
+      +br(50%)
+    &__img
+      max-width: 100%
+      height: auto
+    &__name
+      font-size: 16px
+      color: #252525
+      font-weight: 700
+    &__info-details
+      &__head
+        display: flex
+        justify-content: space-between
+        border-bottom: 1px dashed #d7d7d7
+        padding-bottom: 15px
+        margin-bottom: 15px
+    &__social
+      display: -webkit-box
+      display: -ms-flexbox
+      display: flex
+      -webkit-box-align: center
+      -ms-flex-align: center
+      align-items: center
+    &-contacts
+      display: flex
+      flex-wrap: wrap
+      padding: 10px 0px
+      border-bottom: 1px dashed #d7d7d7
+      margin: 0 15px
+      &__item
+        width: 33.33%
+        padding: 10px
+        div
+          margin-bottom: 10px
+    &-excerpt
+      padding: 20px 15px
+    .share-text
+      margin-right: 30px
+    .social__link
+      margin-right: 15px
+  .payment
+    overflow: hidden
+    +br(8px 8px 0 0px)
+    background-color: #fff
+    margin-bottom: 55px
+    &-header
+      background-color: $blue
+      padding: 10px 0
+      text-align: center
+      font-weight: 600
+      font-size: 16px
+      color: #fff
+    &-body
+      &-header
+        padding: 10px 15px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        border-bottom: 1px dashed #d7d7d7
+        font-size: 16px
+        color: $blue
+        font-weight: 600
+      &__desc
+        padding: 10px 15px
+        border-bottom: 1px dashed #d7d7d7
+      &-select
+        padding: 10px 15px
+        border-bottom: 1px dashed #d7d7d7
+        &__title
+          text-align: center
+          font-weight: 600
+          margin-bottom: 20px
+      &-grid
+        display: flex
+        justify-content: space-around
+        align-items: center
+        flex-wrap: wrap
+        &__item
+          width: 120px
+          height: 120px
+          margin: 10px auto
+          text-transform: uppercase
+          text-align: center
+          display: flex
+          flex-direction: column
+          padding-top: 30px
+          align-items: center
+          cursor: pointer
+          border-radius: 20px
+          font-weight: 400
+          &-wrap
+            width: 25%
+            text-align: center
+            input[type="radio"]
+              display: none
+              &:checked + label
+                .payment-body-grid__item
+                  box-shadow: 0px 0px 15px 0px rgba(42, 130, 230, 0.15)
+          &:hover
+            box-shadow: 0px 0px 15px 0px rgba(42, 130, 230, 0.15)
+      &-footer
+        padding: 15px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        font-weight: 600
+        .other-var
+          color: $red
+          text-decoration: underline
+          &:hover
+            text-decoration: none
+        .payment-btn
+          background-color: #3e99dd
+          color: #fff
+          width: 150px
+          height: 35px
+          text-align: center
+          border-radius: 17px
+          &:hover
+            background-color: lighten($blue, 7%)
+      .grid-item
+        &__icon
+          height: 30px
+          margin-bottom: 10px
+          .ic
+            &--card
+              background: url('../img/icons/card.svg') no-repeat 50% 50%
+              width: 22px
+              height: 16px
+            &--phone
+              background: url('../img/icons/phone.svg') no-repeat 50% 50%
+              width: 12px
+              height: 22px
+            &--terminal
+              background: url('../img/icons/terminal.svg') no-repeat 50% 50%
+              width: 18px
+              height: 22px
+            &--sms
+              background: url('../img/icons/sms.svg') no-repeat 50% 50%
+              width: 22px
+              height: 22px
+            &--yandex
+              background: url('../img/icons/yandex.svg') no-repeat 50% 50%
+              width: 22px
+              height: 22px
+            &--qiwi
+              background: url('../img/icons/qiwi.svg') no-repeat 50% 50%
+              width: 22px
+              height: 22px
+            &--webmoney
+              background: url('../img/icons/webmoney.svg') no-repeat 50% 50%
+              width: 22px
+              height: 22px
+            &--paypal
+              background: url('../img/icons/paypal.svg') no-repeat 50% 50%
+              width: 80px
+              height: 22px
+  .content__line
+    margin-bottom: 40px
+
+@media (max-width: 991px) and (min-width: 768px)
+  .content
+    .transport
+      .main-block
+        &-contacts
+          &__item
+            width: 50%
+
+@media (max-width: 767px) and (min-width: 320px)
+  .content
+    .transport
+      padding: 20px 15px
+      &-regdate
+        width: 100%
+        border-bottom: 1px solid #bdbdbd
+        padding-bottom: 12px
+      &__title
+        padding: 0
+      .main-block
+        margin: 0 -5px 30px
+        border: 1px solid #dceaf4
+        +br(10px)
+        position: relative
+        overflow: inherit
+        margin-top: 65px
+        &__img-wrap
+          position: absolute
+          margin: 0
+          width: 106px
+          min-width: 106px
+          height: 106px
+          top: -53px
+          left: 50%
+          transform: translateX(-50%)
+        &__info
+          padding-top: 65px
+          padding-bottom: 0
+          border-bottom: none
+        &-details
+          border-bottom: 1px solid #bdbdbd
+        &__bottom-bar
+          flex-direction: column
+          align-items: flex-start
+          border-top: none
+        &__post-det
+          width: 100%
+          border-bottom: 1px dashed #d7d7d7
+          padding-bottom: 10px
+        &__social
+          flex-direction: column
+          align-items: flex-start
+          .share-text
+            padding: 10px 0
+        &__info-details__head
+          flex-wrap: wrap
+          padding-bottom: 15px
+          justify-content: center
+        &-details
+          border-bottom: none
+          &__item
+            line-height: normal
+            margin-bottom: 10px
+          &__website
+            text-align: center
+            border-top: 1px solid #bdbdbd
+            border-bottom: 1px dashed #d7d7d7
+            margin: 0
+            padding: 10px 0
+          &__contacts
+            text-align: center
+            border-bottom: 1px solid #bdbdbd
+            padding: 10px 0
+        &-excerpt
+          border-bottom: 1px solid #bdbdbd
+          padding: 20px 0
+          margin: 0 15px
+      .tags
+        .content__title
+          margin-bottom: 10px
+
+@media (max-width: 767px) and (min-width: 520px)
+  .content
+    .transport
+      .main-block
+        &-contacts
+          &__item
+            width: 50%
+
+@media (max-width: 519px) and (min-width: 320px)
+  .content
+    .transport
+      .main-block
+        &-contacts
+          &__item
+            width: 100%
+            & + .main-block-contacts__item
+              border-top: 1px dashed #d7d7d7

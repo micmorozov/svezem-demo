@@ -1,0 +1,15 @@
+encoding "utf8";
+
+TTextMinerConfig {
+  Dictionary = "cargoNameDic.gzt";
+  Articles = [
+    { Name = "имя_груз" }
+  ],
+  Facts = [
+    { Name = "Cargo" }
+  ],
+  Output = {
+    Format = json;
+  }
+  //PrintTree = "cargoName/output/output_tree.txt";
+}

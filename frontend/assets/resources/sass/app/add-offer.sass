@@ -1,0 +1,609 @@
+.add-offer
+	padding: 20px 0
+	&-block
+		margin-bottom: 50px
+		&.conditions
+			margin-bottom: 0px
+			.simple-select1
+				& + .select2-container
+					max-width: 180px !important
+		&-header
+			background-color: #3e99dd
+			color: #fff
+			padding: 8px 15px 6px
+			border-radius: 8px 8px 0 0px
+			margin-bottom: 30px
+			font-weight: 700
+		&-body
+			flex: 1
+		&-wrap
+			display: flex
+			flex-direction: row-reverse
+		.form
+			&-label
+				min-width: 240px
+				padding-top: 10px
+			&-custom-input
+				width: 100%
+				max-width: 440px
+				&.date
+					width: 214px
+					position: relative
+					background: #ecf0f3 url("../img/icons/calendar-icon.png") no-repeat 90% 50%
+					&::-webkit-input-placeholder
+						color: transparent
+					&::-moz-placeholder
+						color: transparent
+					&:-ms-input-placeholder
+						color: transparent
+					&:-moz-placeholder
+						color: transparent
+					&.from
+						margin-right: 10px
+					&.disable
+						opacity: .7
+						cursor: not-allowed
+			&-field
+				display: flex
+				margin-bottom: 35px
+				.no-padding
+					padding: 0
+				.simple-select1
+					& + .select2-container
+						max-width: 440px
+				input[type="text"] + span
+					font-weight: 700
+					margin-left: 15px
+					padding-top: 10px
+				.date-wrap
+					position: relative
+					font-weight: 400
+					cursor: pointer
+					input
+						cursor: pointer
+						padding-left: 55px
+					&::before
+						content: 'С'
+						position: absolute
+						z-index: 1
+						top: 50%
+						transform: translateY(-50%) translateX(20px)
+					&.to
+						margin-left: 10px
+						&::before
+							content: 'По'
+				.block
+					flex: 1
+				.part
+					&.for
+						select
+							width: 180px
+							display: inline-block
+						& > span
+							margin-right: 15px
+					&.price
+						margin-right: 50px
+						input
+							max-width: 390px
+							width: 100%
+					&.payment-method
+						label
+							margin: 0 50px 30px 0
+				.intl-tel-input
+					max-width: 440px
+				.form-custom-button
+					text-transform: none
+					padding-left: 50px
+					padding-right: 50px
+				input[type='checkbox']
+					display: none
+					& + label
+						font-weight: 400
+						color: #252525
+						span
+							display: inline-block
+							width: 22px
+							height: 22px
+							border-radius: 4px 
+							border: 2px solid #e3e4eb
+							margin-right: 15px
+							background-color: #FFF
+							position: relative
+							cursor: pointer
+							vertical-align: middle
+							&:before
+								content: ''
+								display: block
+								position: absolute
+								top: 50%
+								left: 50%
+								transform: translateY(-50%) translateX(-50%)
+								width: 13px
+								height: 10px
+								background-image: url("../img/icons/check.png")
+								opacity: 0
+					&:checked
+						& + label
+							span
+								&:before
+									opacity: 1
+				.radion-btn
+					margin-left: 25px
+					input[type='checkbox']
+						display: none
+						& + label
+							font-weight: 400
+							color: #252525
+							span
+								display: inline-block
+								width: 22px
+								height: 22px
+								border-radius: 4px 
+								border: 2px solid #e3e4eb
+								margin-right: 15px
+								background-color: #FFF
+								position: relative
+								cursor: pointer
+								vertical-align: middle
+								&:before
+									content: ''
+									display: block
+									position: absolute
+									top: 50%
+									left: 50%
+									transform: translateY(-50%) translateX(-50%)
+									width: 13px
+									height: 10px
+									background-image: url("../img/icons/check.png")
+									opacity: 0
+						&:checked
+							& + label
+								span
+									&:before
+										opacity: 1
+		.checkbox-list
+			-webkit-column-count: 4
+			-moz-column-count: 4
+			-o-column-count: 4
+			column-count: 4
+			&__item
+				margin-bottom: 15px
+				input[type='checkbox']
+					display: none
+					& + label
+						font-weight: 400
+						color: #252525
+						line-height: 24px
+						span
+							display: inline-block
+							width: 22px
+							height: 22px
+							border-radius: 4px 
+							border: 2px solid #e3e4eb
+							margin-right: 15px
+							background-color: #FFF
+							position: relative
+							cursor: pointer
+							vertical-align: middle
+							&:before
+								content: ''
+								display: block
+								position: absolute
+								top: 50%
+								left: 50%
+								transform: translateY(-50%) translateX(-50%)
+								width: 13px
+								height: 10px
+								background-image: url("../img/icons/check.png")
+								opacity: 0
+					&:checked
+						& + label
+							span
+								&:before
+									opacity: 1
+			&__more
+				cursor: pointer
+				margin-bottom: 15px
+				.text
+					color: #3e99dd
+					text-decoration: underline
+				&:hover
+					text-decoration: none
+				i
+					color: #4b4e58
+					text-decoration: none
+					margin-right: 5px
+		select
+			max-width: 440px
+			width: 100%
+		.regi-btn
+			background-color: transparent
+			color: #ef0e14
+			text-decoration: underline
+			margin-bottom: 35px
+			&:hover
+				text-decoration: none
+	&-add-img
+		text-align: center
+		float: right
+		max-width: 440px
+		width: 100%
+		.delete-img
+			position: absolute
+			color: #ef0e14
+			font-size: 18px
+			right: 0
+			top: -7px
+			cursor: pointer
+			opacity: .6
+			transition: all .3s linear
+			&:hover
+				opacity: 1
+		&__img
+			width: 196px
+			height: 196px
+			background: #ccc no-repeat 50% 50%
+			background-size: cover
+			border: 1px solid #4a9ede
+			border-radius: 50%
+			box-shadow: 0px 2px 7px 0px rgba(40, 42, 47, 0.2)
+			position: relative
+			cursor: pointer
+			&-wrap
+				width: 196px
+				height: 196px
+				position: relative
+				margin: 0 auto 25px
+		&__btn
+			background-color: transparent
+			color: #ef0e14
+			text-decoration: underline
+			cursor: pointer
+			input
+				display: none
+			&:hover
+				text-decoration: none
+
+
+
+@media (max-width: 1199px) and (min-width: 992px)
+	.add-offer
+		&-block
+			.checkbox-list
+				-webkit-column-count: 3
+				-moz-column-count: 3
+				-o-column-count: 3
+				column-count: 3
+			.form-field
+				display: flex
+				.date-wrap
+					&.to
+						margin: 15px 0 0
+				.part
+					&.price
+						white-space: nowrap
+						margin-bottom: 20px
+						display: block
+						width: 100%
+					&.for
+						display: block
+						margin-left: -35px
+
+@media (max-width: 991px) and (min-width: 768px)
+	.add-offer
+		&-block
+			&-body
+				flex: none
+			&-wrap
+				flex-direction: column
+			.checkbox-list
+				-webkit-column-count: 2
+				-moz-column-count: 2
+				-o-column-count: 2
+				column-count: 2
+			.form-field
+				display: flex
+				.date-wrap
+					&.to
+						margin: 15px 0 0
+				.part
+					&.price
+						white-space: nowrap
+						margin-bottom: 20px
+						display: block
+						width: 100%
+					&.for
+						display: block
+						margin-left: -35px
+			.block
+				&.date
+					display: flex
+					align-items: center
+					& > span
+						display: flex
+						flex-direction: column
+					.radion-btn
+						label
+							white-space: nowrap
+		&-add-img
+			max-width: 100%
+			margin-bottom: 40px
+
+
+@media (max-width: 767px) and (min-width: 320px)
+	.error-wrapper__long .tooltip.fade.top.in
+		top: -93px !important
+	.tooltip.fade.top.in
+		max-width: 100% !important
+	.add-offer-add-img__img-wrap
+		height: auto
+	.add-offer-block .form-field .part.for > span
+		margin-right: 0
+	.form-field label[for="car-type"]
+		width: 179px
+	.add-offer
+		padding: 20px 15px
+		&-block
+			margin-bottom: 30px
+			&.conditions
+				.simple-select1
+					& + .select2-container
+						max-width: 100% !important
+			&-body
+				flex: none
+			&-header
+				border-radius: 0
+				margin-left: -15px
+				margin-right: -15px
+			&-wrap
+				flex-direction: column
+			.checkbox-list
+				-webkit-column-count: 1
+				-moz-column-count: 1
+				-o-column-count: 1
+				column-count: 1
+				.more-btn
+					display: block
+					margin: 0 -15px
+					text-align: center
+					background-image: linear-gradient(to top, #d6d7dd,#e2e3ea)
+					height: 30px
+					padding: 5px 0
+					white-space: nowrap
+			.form
+				&-custom-input
+					&.date
+						background-image: none
+						&::-webkit-input-placeholder
+							color: inherit
+						&::-moz-placeholder
+							color: inherit
+						&:-ms-input-placeholder
+							color: inherit
+						&:-moz-placeholder
+							color: inherit
+				&-btn
+					justify-content: center
+				&-label
+					position: absolute
+					top: 0
+					left: 0
+					padding: 12px
+					line-height: inherit
+					background-color: #e3e4eb
+					min-width: 177px
+					text-align: center
+					-webkit-border-radius: 20px
+					-moz-border-radius: 20px
+					-ms-border-radius: 20px
+					border-radius: 20px
+					z-index: 1
+					font-size: 12px
+					+ input
+						padding-left: 170px
+				&-field
+					display: flex
+					margin-bottom: 15px
+					position: relative
+					label
+						min-width: 150px !important
+					.mob-label
+						position: absolute
+						top: 0
+						left: 0
+						padding: 12px
+						line-height: inherit
+						background-color: #e3e4eb
+						min-width: 177px
+						text-align: center
+						-webkit-border-radius: 20px
+						-moz-border-radius: 20px
+						-ms-border-radius: 20px
+						border-radius: 20px
+						z-index: 1
+						font-weight: 700
+						font-size: 12px
+					.simple-select1
+						& + .select2-container
+							max-width: 100%
+					input[type="text"] + span
+						display: none
+					.date-wrap
+						position: relative
+						&.to
+							margin: 15px 0 0
+						input
+							padding: 12px 25px 12px 180px
+						&:before
+							display: none
+					.part
+						&.price
+							white-space: nowrap
+							margin-bottom: 20px
+							display: block
+							width: 100%
+							position: relative
+							input
+								width: 100%
+								max-width: 100%
+								padding-left: 180px
+						&.for
+							display: block
+							select
+								display: block
+								width: 100%
+								max-width: 100%
+							& > span
+								display: inline-block
+								width: calc(100% - 60px)
+								&.za
+									//display: none
+									width: 50px
+									text-align: center
+									position: relative
+									top: 1px
+							.select2-container
+								max-width: 100%
+								.select2-selection
+									padding-left: 8px
+					.intl-tel-input
+						max-width: 100%
+					.select2-container--default 
+						.select2-selection--single
+							border: 2px solid #e3e4eb
+							background-color: #FFF
+							padding: 9px 20px 12px 172px
+					.radion-btn
+						display: block
+						margin: 20px 0 0
+					select
+						max-width: 100%
+						& + .select2-container
+							width: 100% !important
+					.block
+						flex: none
+						display: block
+						max-width: 100%
+						width: 100%
+				&-custom-input
+					max-width: 100%
+					padding-left: 183px
+					&.date
+						background-color: #FFF
+						width: 100%
+			.block
+				&.date
+					display: block
+					max-width: 100%
+					width: 100%
+					& > span
+						display: block
+					.date-wrap
+						width: 100%
+					.radion-btn
+						margin: 20px 0 0
+						label
+							white-space: nowrap
+		&-add-img
+			max-width: 100%
+			margin-bottom: 40px
+			&__img
+				width: 102px
+				height: 102px
+		.intl-tel-input.allow-dropdown input, 
+		.intl-tel-input.allow-dropdown input[type=text], 
+		.intl-tel-input.allow-dropdown input[type=tel], 
+		.intl-tel-input.separate-dial-code input, 
+		.intl-tel-input.separate-dial-code input[type=text], 
+		.intl-tel-input.separate-dial-code input[type=tel]
+			padding-left: 232px
+		.intl-tel-input.allow-dropdown .flag-container, 
+		.intl-tel-input.separate-dial-code .flag-container
+			left: 172px
+	.form__field-wrapper
+		max-width: 100% !important
+
+	.error-wrapper
+		max-width: 100% !important
+	.field-transport-price_from .error-wrapper + span
+		display: none
+	.field-transport-cityfromids .select2-container,
+	.field-transport-citytoids .select2-container
+		width: 100% !important
+		.select2-selection--single
+		//	padding: 12px 35px 12px 25px !important
+			text-align: center
+.show_search
+	color: #2a82e6
+	width: calc(100% + 30px)
+	left: -15px
+	position: relative
+	margin-top: 0
+	cursor: pointer
+	display: none
+	/*margin-bottom: 25px*/
+	&.hide_trigger
+		margin-top: 5px
+	&:hover
+		color: #4b4e58
+	span 
+		i 
+			transform: rotate( 90deg )
+			margin-left: 10px
+			top: 1px
+			position: relative
+			transition: transform .2s
+			&.up
+				transform: rotate( -90deg )
+
+.cargo-search__box.search
+	display: block
+.field-signupform-city_id .form__label
+	float: left
+	min-width: 150px !important
+.post-type__news #w3 
+	display: flex
+	flex-wrap: wrap
+.mob-green a
+	color: #252525
+	pointer-events: none
+@media (max-width:  767px)
+	.mob-green a
+		color: #4aa846
+		pointer-events: auto
+	.field-signupform-city_id 
+		position: relative
+		.form__label
+			float: unset
+			min-width: 100px !important
+		.select2-selection
+			padding-left: 105px
+	.posts__tags
+		display: none
+		width: calc(100% + 30px)
+		margin-left: -15px
+		padding: 0 15px
+		margin-bottom: 0
+	.cargo-search__found
+		margin-top: 25px
+	.carrier-search__found
+		margin-top: 25px
+	.transportation-search__found
+		margin-top: 25px
+	.cargo-search__box.search
+		border-radius: 0
+		display: none
+		/*top: -25px*/
+		position: relative
+		margin-bottom: 0
+	.show_search
+		display: block
+	.field-loginform-email .form-custom-input,
+	.field-loginform-password .form-custom-input,
+	.field-passwordresetrequestform-email .form-custom-input,
+	.field-signupform-email .form-custom-input
+		padding-left: 105px
+@media (max-width: 340px)
+	.add-offer-block .form-field .part.price input
+		padding-left: 170px
+		

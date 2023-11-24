@@ -1,0 +1,157 @@
+/*	==================================
+ * TAGS
+ * ================================== */
+
+.tags {
+  margin-bottom: 60px;
+  position: relative;
+  z-index: 5;
+
+  &__container {
+    @include br(10px);
+
+    padding: 10px 15px;
+    transition: all 0.3s linear;
+
+    &.active {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+    }
+  }
+
+  &__item {
+    display: inline-block;
+    padding: 7px 20px;
+    background-color: #ffffff;
+    border: 1px dashed #c8cfd4;
+    color: $main;
+    font-size: 14px;
+    margin: 5px 0px 5px 0;
+
+    @include br(16px);
+
+    cursor: pointer;
+
+    &:hover {
+      background-color: #e3e4eb;
+    }
+  }
+
+  &__hide-wrap {
+    text-align: right;
+    margin: 10px 0;
+  }
+
+  &__more,
+  &__hide .underline {
+    color: $blue;
+    font-size: 16px;
+    text-decoration: underline;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &__hide {
+    cursor: pointer;
+
+    .fa-chevron-down {
+      color: #4b4e58;
+      margin-right: 5px;
+      font-size: 12px;
+      position: relative;
+      top: -2px;
+    }
+
+    .fa-external-link {
+      margin-left: 5px;
+    }
+  }
+
+  &__nav {
+    white-space: nowrap;
+    cursor: pointer;
+
+    i {
+      margin-right: 13px;
+    }
+
+    .text {
+      color: $blue;
+      text-decoration: underline;
+    }
+  }
+
+  &__link {
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: $screen-xs-max) {
+  .tags {
+    margin-bottom: 35px;
+
+    &__container {
+      padding: 10px 0px 0;
+      margin: 0 -16px;
+
+      &:hover {
+        background-color: #f8f8f8;
+        box-shadow: none;
+      }
+    }
+
+    &__item {
+      margin-left: 7px;
+      margin-right: 7px;
+    }
+
+    &__nav,
+    &__link {
+      margin-top: 20px;
+      background-image: linear-gradient(to top, #d6d7dd, #e2e3ea);
+      width: 100%;
+      height: 30px;
+      text-align: center;
+      display: block;
+      padding: 5px 0;
+      white-space: nowrap;
+
+      .text {
+        text-transform: none;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .application .tags__nav {
+    width: calc(100% + 30px);
+    margin-left: -15px;
+  }
+
+  .content {
+    .application {
+      .tags {
+        padding: 0;
+      }
+    }
+  }
+}
+
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+  .tags {
+    &__container {
+      padding: 10px 7px;
+    }
+  }
+}
+
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+}
+
+@media (min-width: $screen-lg-min) {
+}

@@ -1,0 +1,88 @@
+/*
+  Переопределение стилей bootstrap
+ */
+
+$brand-primary: #3e99dd;
+$panel-primary-border: #e1f0fa;
+$border-radius-base: 8px;
+$input-border-radius: 16px;
+$offcanvas-media: 992px;
+$padding-base-vertical: 8px;
+//$navbar-default-link-color:                 #3e99dd !default;
+//$navbar-default-link-hover-color:           #333;
+//$navbar-default-link-hover-bg:              #d7d7d7;
+$navbar-default-link-active-color: #fff;
+$navbar-default-link-active-bg: #3e99dd;
+$navbar-default-bg: #fff;
+$grid-float-breakpoint: 992px;
+//$navbar-default-link-disabled-color:        #ccc !default;
+//$navbar-default-link-disabled-bg:           transparent !default;
+//$navbar-default-border: #3e99dd26;
+//$border-radius-large:       18px;
+//$border-radius-small:       6px;
+//$btn-border-radius-base: 20px;
+$breadcrumb-bg: #fff;
+
+@import "bootstrap/bootstrap";
+@import "bootstrap/bootstrap.offcanvas";
+
+.navbar-brand {
+  padding: 5px floor(($grid-gutter-width / 2));
+
+  img {
+    height: 40px;
+  }
+}
+
+.btn-svezem {
+  min-width: 180px;
+  border-radius: 17px;
+  box-shadow: 0 7px 10px rgba(40, 42, 47, 0.18);
+
+  &:hover {
+    box-shadow: none;
+  }
+}
+
+
+.row.display-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.row.display-flex > [class*='col-'] {
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-menu {
+  li a {
+    //    border-bottom: 1px dashed #eeeeee;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  li:last-child a {
+    //    border:none;
+  }
+}
+
+.font-weight-bold {
+  font-weight: bold;
+}
+
+.media-object-32 {
+  width: 32px;
+  height: 32px;
+  font-size: 32px;
+}
+
+.media-body {
+  font-size: 16px;
+}
+
+@media (max-width: $screen-sm-max) {
+  .dropdown-menu > li > a {
+    white-space: normal;
+  }
+}

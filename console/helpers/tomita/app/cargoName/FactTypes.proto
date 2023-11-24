@@ -1,0 +1,10 @@
+import "base.proto";
+import "facttypes_base.proto";
+
+message Cargo: NFactType.TFact
+{
+    optional string Real = 1;
+    optional string Name = 2;
+    optional string NameRod = 3;
+    optional string NameVin = 4;
+}

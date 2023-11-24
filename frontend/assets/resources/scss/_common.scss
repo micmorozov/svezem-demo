@@ -1,0 +1,73 @@
+body {
+  font-family: "sf_ui_display", sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #4b4e58;
+  font-weight: 400;
+  background-color: #f8f8f8;
+}
+
+//select {
+//  display: block;
+//  background-color: #ecf0f3;
+//
+//  @include br(20px);
+//
+//  border: none;
+//  padding: 12px 25px;
+//  height: 40px;
+//}
+
+
+a {
+  color: $blue;
+}
+
+body a,
+body a:hover,
+body a:active,
+body a:visited,
+body a:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+html {
+  body {
+    .tooltip {
+      z-index: 1000;
+    }
+
+    .main-container {
+      textarea.error,
+      input.error,
+      select.error + .tooltip + .select2 .select2-selection {
+        box-shadow: 0 0 5px 0 rgba(239, 14, 20, 0.5) !important;
+      }
+    }
+
+    .tooltip-inner {
+      background-color: #9e1e1e;
+    }
+
+    .tooltip.top .tooltip-arrow {
+      border-top-color: #9e1e1e;
+    }
+
+    .tooltip.bottom .tooltip-arrow {
+      border-bottom-color: #9e1e1e;
+    }
+
+    .tooltip.left .tooltip-arrow {
+      border-left-color: #9e1e1e;
+    }
+
+    .tooltip.right .tooltip-arrow {
+      border-right-color: #9e1e1e;
+    }
+  }
+}
+
+textarea {
+  resize: none;
+}

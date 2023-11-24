@@ -1,0 +1,23 @@
+{
+  "svezem-geoip": {
+    "order": 0,
+    "index_patterns": [
+      "svezem-*"
+    ],
+    "settings": {},
+    "mappings": {
+      "_default_": {
+        "properties": {
+          "geoip": {
+            "properties": {
+              "location": {
+                "type": "geo_point"
+              }
+            }
+          }
+        }
+      }
+    },
+    "aliases": {}
+  }
+}

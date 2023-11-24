@@ -1,0 +1,308 @@
+.services {
+
+    &__item {
+        position: relative;
+
+        /* &-pin {
+            height: 30px;
+            width: 30px;
+            position: absolute;
+            top: -8px;
+            left: 5px;
+            z-index: 5;
+            background: url(../img/icons/ic-pin.png) no-repeat center center;
+            background-size: cover;
+            display: none;
+        }*/
+
+        &-head {
+            padding: 16px 0;
+            border-bottom: 1px dashed $divide-border-color;
+        }
+
+        &-head-logo {
+            height: 88px;
+            width: 88px;
+            float: left;
+            border: 1px solid #3e99dd;
+            overflow: hidden;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        &-head-info {
+            margin-left: 105px;
+        }
+
+        &-head-title {
+            font-size: 16px;
+            font-weight: 700;
+            border-bottom: 1px dashed $divide-border-color;
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+
+            &--placed {
+                font-weight: 400;
+                float: right;
+            }
+
+            &--heading {
+                float: left;
+            }
+        }
+
+        &-info {
+            padding: 10px 0;
+        }
+
+        &-price {
+            padding: 8px 0;
+            font-size: 16px;
+            font-weight: 700;
+            justify-content: space-between;
+            border-radius: 8px;
+        }
+
+        &-price-value {
+            color: green;
+        }
+
+        &-contact {
+            margin-top: 16px;
+            justify-content: space-between;
+
+            a {
+                font-weight: bold;
+                font-size: 16px;
+                text-decoration: underline;
+            }
+
+            a:hover {
+                text-decoration: none;
+            }
+
+        }
+
+        &-promo {
+            border-top: 1px dashed $divide-border-color;
+            padding-top: 16px;
+            padding-bottom: 16px;
+        }
+
+        &-actions {
+            padding-top: 6px;
+        }
+
+        &-action {
+            display: inline-block;
+        }
+
+        &-promo-btn,
+        &-promo-btn:hover,
+        &-promo-btn:active,
+        &-promo-btn:visited {
+            position: relative;
+            width: 100%;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: none !important;
+            border-color: #dfdfdf;
+        }
+
+        &-promo-btn:hover,
+        &-promo-btn:active {
+            background-color: #eeeeee;
+        }
+
+        &-promo-btn--extend,
+        &-promo-btn--extend:hover,
+        &-promo-btn--extend:active,
+        &-promo-btn--extend:visited {
+            @extend .services__item-promo-btn;
+            background-color: #3e99dd;
+            color: white;
+        }
+
+        &-promo-btn-progress {
+            position: absolute;
+            z-index: 0;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            background: #d7d7d7;
+        }
+
+        &-promo-btn-title {
+            position: relative;
+            z-index: 1
+        }
+
+        &-promo-btn-progress.warning {
+            background: #ff8f53;
+        }
+
+        &-content {
+            border-right: 1px dashed $divide-border-color;
+        }
+    }
+
+    .contact-divider {
+        border-top: 1px dashed $divide-border-color;
+    }
+
+    &__item.pinned .services__item-pin {
+        display: block;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .services {
+        &__item {
+            flex-direction: column;
+
+            &-content {
+                border: none;
+            }
+
+            &__trans-car {
+                float: left;
+                padding: 10px 0;
+            }
+
+            &__block.first {
+                padding: 20px 0;
+                flex: 1;
+            }
+
+            &__trans-block {
+                padding: 0;
+                border-bottom: none;
+            }
+
+            &__trans-logo-block {
+                padding-left: 20px;
+            }
+
+            &__block.second {
+                min-width: 100%;
+                width: 100%;
+                border-left: none;
+
+                .second__item {
+                    width: 30%;
+                    background-color: rgba(187, 222, 251, 0.2);
+                    margin-bottom: 0;
+                    padding: 20px;
+
+                    &.item__price {
+                        width: 40%;
+                        justify-content: flex-start;
+
+                        .price {
+                            margin: 0 10px;
+                        }
+                    }
+
+                    &.item__nds {
+                        text-align: left;
+                    }
+                }
+
+                .second__items {
+                    display: flex;
+                }
+            }
+
+            &__contact {
+                margin: 0 10px;
+                border: none;
+            }
+
+            &__excerpt {
+                padding: 20px 20px 0;
+            }
+
+            .trans {
+                padding-bottom: 0;
+                border-bottom: 0;
+
+                &__name {
+                    width: 100%;
+                    float: none;
+                    border-bottom: 1px dashed $divide-border-color;
+                    padding-bottom: 10px;
+                }
+
+                &__direction {
+                    width: inherit;
+                    float: none;
+                    text-align: left;
+                    padding-left: 135px;
+                    margin-left: -135px;
+                }
+
+                &__loader {
+                    text-align: left;
+                }
+            }
+
+            &__trans-car-details {
+                display: block;
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .services {
+        &__item {
+            &-content {
+                border: none;
+            }
+
+            &-price {
+                padding: 0;
+            }
+
+            &-head-logo {
+                margin-bottom: 16px;
+            }
+
+            &-head-direction {
+                clear: both;
+                padding-top: 16px;
+                border-top: 1px dashed $divide-border-color;
+            }
+
+            &-head-title {
+                margin-left: 105px;
+                border: none;
+
+                &--placed {
+                    float: none;
+                }
+
+                &--heading {
+                    float: none;
+                }
+            }
+
+            &-head-info {
+                margin: 0;
+            }
+
+            &-promo-btn {
+                margin-bottom: 6px;
+            }
+        }
+
+    }
+}

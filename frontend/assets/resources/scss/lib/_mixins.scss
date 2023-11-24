@@ -1,0 +1,422 @@
+// width
+@mixin r($width) {
+  @media only screen and (max-width: $width + "px") {
+    @content;
+  }
+}
+
+// height
+@mixin rh($height) {
+  @media only screen and (max-height: $height + "px") {
+    @content;
+  }
+}
+
+// Обрезание текста с 3 точиями
+@mixin text-overflow {
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin ie {
+  *display: inline;
+  *zoom: 1;
+}
+
+%pseudo {
+  position: relative;
+
+  &:before, &:after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+@mixin pseudo {
+  @extend %pseudo;
+}
+
+@mixin coverdiv {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@mixin cover {
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+@mixin size($width: 100%, $height: 100%) {
+  -moz-background-size: $width $height;
+  -webkit-background-size: $width $height;
+  background-size: $width $height;
+}
+
+// retina, also available as +hdpi
+@mixin retina {
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+    @content;
+  }
+}
+
+/*=box
+ * +box-sizing(border-box) */
+
+// Центрирование блока по горизонтали и по вертикали
+@mixin vcenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  @include translate(-50%, -50%);
+}
+
+// simple gradient
+@mixin g($color1, $color2) {
+  @include background-image(linear-gradient($color1, $color2));
+}
+
+@mixin gh($color1, $color2) {
+  @include background-image(linear-gradient(left, $color1, $color2));
+}
+
+// font-family
+@mixin font($alias, $name) {
+  @font-face {
+    font-family: $alias;
+    src: url("fonts/" + $name + ".eot");
+    src: url("fonts/" + $name + ".eot?#iefix") format("embedded-opentype"), url("fonts/" + $name + ".woff2") format("woff2"), url("fonts/" + $name + ".woff") format("woff"), url("fonts/" + $name + ".ttf") format("truetype");
+    font-weight: normal;
+    font-display: auto;
+    font-style: normal;
+  }
+}
+
+// ROTATE
+@mixin rotate($deg: 0, $m11: 0, $m12: 0, $m21: 0, $m22: 0) {
+  -moz-transform: rotate($deg + deg);
+  -o-transform: rotate($deg + deg);
+  -webkit-transform: rotate($deg + deg);
+  -ms-transform: rotate($deg + deg);
+  transform: rotate($deg + deg);
+  filter: progid:DXImageTransform.Microsoft.Matrix(M11=$m11, M12=$m12,M21=$m21, M22=$m22, sizingMethod='auto expand');
+  zoom: 1;
+}
+
+// TRANSITION
+@mixin transition($what) {
+  -moz-transition: $what;
+  -o-transition: $what;
+  -webkit-transition: $what;
+  -ms-transition: $what;
+  transition: $what;
+}
+
+@mixin tr($what) {
+  @include transition($what);
+}
+
+@mixin hide-text {
+  font: 0 / 0 a;
+  text-shadow: none;
+  color: transparent;
+}
+
+@mixin hidetext {
+  @include hide-text;
+}
+
+@mixin justify {
+  text-align: justify;
+  line-height: 0;
+  font-size: 0;
+  text-justify: newspaper;
+  zoom: 1;
+  text-align-last: justify;
+
+  &:after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 0px;
+    visibility: hidden;
+    overflow: hidden;
+  }
+}
+
+@mixin vertical {
+  text-align: center;
+  font-size: 0;
+
+  &:before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 0;
+    height: 100%;
+  }
+}
+
+@mixin clr {
+  &:after {
+    content: " ";
+    display: table;
+    clear: both;
+  }
+
+  *zoom: 1;
+}
+
+@mixin placeholder-color($color) {
+  &:-moz-placeholder,
+  &::-moz-placeholder {
+    color: $color;
+    opacity: 1;
+  }
+
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+}
+
+@mixin placeholder {
+  &:-ms-input-placeholder {
+    @content;
+  }
+
+  &:-moz-placeholder {
+    @content;
+  }
+
+  &::-moz-placeholder {
+    @content;
+  }
+
+  &::-webkit-input-placeholder {
+    @content;
+  }
+
+  &::placeholder {
+    @content;
+  }
+}
+
+@mixin unselectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@mixin nosel {
+  @include unselectable;
+}
+
+@mixin prevent-text {
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+}
+
+@mixin font-smoothing($val: antialiased) {
+  -webkit-font-smoothing: $val;
+  -moz-font-smoothing: $val;
+  -ms-font-smoothing: $val;
+  -o-font-smoothing: $val;
+}
+
+@mixin selection {
+  & ::selection {
+    @content;
+  }
+
+  & ::-moz-selection {
+    @content;
+  }
+}
+
+@mixin sel {
+  @include selection;
+}
+
+@mixin scrollbar {
+  &::-webkit-scrollbar {
+    @content;
+  }
+}
+
+@mixin scrollbar-track {
+  &::-webkit-scrollbar-track {
+    @content;
+  }
+}
+
+@mixin scrollbar-thumb {
+  &::-webkit-scrollbar-thumb {
+    @content;
+  }
+}
+
+@mixin scrollbar-track-piece {
+  &::-webkit-scrollbar-track-piece {
+    @content;
+  }
+}
+
+//triangle
+@mixin arr($width, $height, $bg, $direction) {
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+
+  @if $direction == t {
+    border-width: 0 ($width / 2 + px) ($height + px) ($width / 2 + px);
+    border-color: transparent transparent $bg transparent;
+  }
+
+  @if $direction == r {
+    border-width: ($height / 2 + px) 0 ($height / 2 + px) ($width + px);
+    border-color: transparent transparent transparent $bg;
+  }
+
+  @if $direction == b {
+    border-width: ($height + px) ($width / 2 + px) 0 ($width / 2 + px);
+    border-color: $bg transparent transparent transparent;
+  }
+
+  @if $direction == l {
+    border-width: ($height / 2 + px) ($width + px) ($height / 2 + px) 0;
+    border-color: transparent $bg transparent transparent;
+  }
+
+  @if $direction == tl {
+    border-width: ($height + px) ($width + px) 0 0;
+    border-color: $bg transparent transparent transparent;
+  }
+
+  @if $direction == tr {
+    border-width: 0 ($width + px) ($height + px) 0;
+    border-color: transparent $bg transparent transparent;
+  }
+
+  @if $direction == br {
+    border-width: 0 0 ($height + px) ($width + px);
+    border-color: transparent transparent $bg transparent;
+  }
+
+  @if $direction == bl {
+    border-width: ($height + px) 0 0 ($width + px);
+    border-color: transparent transparent transparent $bg;
+  }
+}
+
+// example
+// +arr(500,50, #000, l)
+// +arr(500,50, #000, bl)
+
+@mixin rotate($var) {
+  -ms-transform: rotate($var + deg);
+  -webkit-transform: rotate($var + deg);
+  transform: rotate($var + deg);
+}
+
+@mixin blur($var) {
+  -webkit-filter: blur($var);
+  filter: blur($var);
+}
+
+@mixin scale($var) {
+  -ms-transform: scale($var);
+  -webkit-transform: scale($var);
+  transform: scale($var);
+}
+
+@mixin counter($var) {
+  counter-reset: $var;
+
+  > li, > dt {
+    &:before {
+      content: counter($var);
+      counter-increment: $var;
+    }
+  }
+}
+
+@function makelongshadow($color) {
+  $val: 0px 0px $color;
+
+  @for $i from 1 through 200 {
+    $val: #{$val}, #{$i}px #{$i}px #{$color};
+  }
+
+  @return $val;
+}
+
+@mixin longshadow($color) {
+  text-shadow: makelongshadow($color);
+}
+
+@mixin br($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin bs($bshadow) {
+  -webkit-box-shadow: $bshadow;
+  -moz-box-shadow: $bshadow;
+  -ms-box-shadow: $bshadow;
+  -o-box-shadow: $bshadow;
+  box-shadow: $bshadow;
+}
+
+@mixin ts($string) {
+  -webkit-text-shadow: $string;
+  -moz-text-shadow: $string;
+  -ms-text-shadow: $string;
+  -o-text-shadow: $string;
+  text-shadow: $string;
+}
+
+@mixin links($link, $visit, $hover, $active) {
+  a {
+    color: $link;
+
+    &:visited {
+      color: $visit;
+    }
+
+    &:hover {
+      color: $hover;
+    }
+
+    &:active {
+      color: $active;
+    }
+  }
+}
+
+@mixin opacity($trans) {
+  -moz-opacity: $trans;
+  -khtml-opacity: $trans;
+  opacity: $trans;
+  filter: alpha(opactiy = $trans * 100);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$trans * 100})";
+}

@@ -1,0 +1,657 @@
+.subscribe_page {
+
+  .radio-pill {
+    border: 1px solid #d7d7d7;
+    padding: 16px;
+    margin: 8px 0;
+    border-radius: 6px;
+  }
+
+  .radio-pill.active {
+    border-color: #3A87AD;
+  }
+
+  .rcontainer {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: normal;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  /* Hide the browser's default radio button */
+  .rcontainer input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  /* Create a custom radio button */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 28px;
+    width: 28px;
+    background-color: #eee;
+    border-radius: 50%;
+  }
+
+  /* On mouse-over, add a grey background color */
+  .rcontainer:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+
+  /* When the radio button is checked, add a blue background */
+  .rcontainer input:checked ~ .checkmark {
+    background-color: #3e99dd;
+  }
+
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  /* Show the indicator (dot/circle) when checked */
+  .rcontainer input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  /* Style the indicator (dot/circle) */
+  .rcontainer .checkmark:after {
+    top: 10px;
+    left: 10px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+  }
+
+  .subscribe-type-options {
+    margin: 8px 0 8px 36px;
+
+    ul.options-list li {
+      min-height: 20px;
+
+      span {
+        display: inline-block;
+        width: 20px;
+      }
+    }
+  }
+
+  .subscribe_wrap {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px 1px rgba(40, 42, 47, 0.1);
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(62, 153, 221, 0.15);
+    margin: 15px auto;
+    transition: 0.3s;
+
+    &:hover {
+      //background-color: rgba(247, 242, 188, 0.5);
+    }
+
+    &.add_form:hover {
+      //background: #ffffff;
+    }
+
+    &.add_form {
+      .subscribe_form {
+        display: block;
+      }
+
+      .app-block__direction-info span {
+        font-size: 16px;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+    }
+
+    .app-block__direction-info {
+      position: relative;
+      padding: 20px 15px;
+
+      .app-block__direction {
+        display: flex;
+        align-items: center;
+
+        .direction__arrow {
+          max-width: 39px;
+          max-height: 24px;
+          margin-right: 25px;
+          margin-left: 10px;
+
+          img {
+            height: 24px;
+          }
+        }
+
+        .direction__flag {
+          margin-right: 10px;
+        }
+      }
+
+      .direction__city {
+        width: 135px;
+      }
+
+      .app-block__coment {
+        float: left;
+        padding: 4px 0;
+        color: #252525;
+        font-size: 16px;
+        font-weight: 700;
+
+        .mobile_cont {
+          display: none;
+        }
+      }
+
+      .app-block__direction {
+        float: left;
+        width: 550px;
+      }
+
+      .app-block__class {
+        padding: 4px 0;
+        color: #4aa846;
+        font-size: 16px;
+        font-weight: 700;
+        position: absolute;
+        right: 130px;
+      }
+
+      .tools_block {
+        float: right;
+
+        .edit,
+        .delete {
+          width: 35px;
+          height: 35px;
+          background-image: url("../img/icons/edit_blue.svg");
+          display: inline-block;
+          background-size: contain;
+          background-position: center;
+          cursor: pointer;
+          background-repeat: no-repeat;
+          position: relative;
+          top: -2px;
+
+          &.active {
+            background-image: url("../img/icons/edit_gray.svg");
+          }
+        }
+
+        .delete {
+          background-image: url("../img/icons/delete_blue.svg");
+        }
+      }
+    }
+  }
+
+  .subscribe_form {
+    border-top: 1px dashed #d7d7d7;
+    padding: 20px 15px;
+  }
+
+  .add-offer-block {
+    margin-bottom: 10px;
+
+    .field_wrap {
+      padding: 0;
+
+      &:first-child {
+        padding-right: 30px;
+      }
+    }
+
+    .form-field {
+      .form-label {
+        min-width: 175px;
+      }
+
+      .select2-container,
+      .field-transport-payment_estimate {
+        width: 100% !important;
+        max-width: 100%;
+        overflow: hidden;
+      }
+    }
+  }
+
+  .total_wrap {
+    border-top: 1px dashed #d7d7d7;
+    padding: 20px 0;
+
+    span {
+      color: #4aa846;
+      font-size: 14px;
+      font-weight: 700;
+
+      &.cost {
+        color: #252525;
+      }
+    }
+  }
+
+  .payment-body-grid__item-wrap input[type="radio"]:checked + label .payment-body-grid__item {
+    background: #fff;
+  }
+
+  /*
+  .btn_wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      button[type="submit"] {
+          max-width: 100%;
+          padding: 10px 50px;
+          display: inline-block;
+          top: 0;
+          margin: 0;
+          text-transform: none;
+      }
+
+      .cancel {
+          background: transparent;
+          font-weight: bold;
+          border-bottom: 1px solid;
+          transition: 0.3s;
+          line-height: 1;
+          display: inline-block;
+
+          &:hover {
+              border-bottom: 1px solid #fff;
+          }
+      }
+  }
+
+   */
+
+  .pay_wrap {
+    margin-top: 15px;
+
+    //border-top: 1px dashed #d7d7d7
+    .total_wrap {
+      border-top: none;
+    }
+
+    .add-offer-block {
+      &.calendar {
+        .fastLinks {
+          padding-left: 125px;
+        }
+
+        .notification-info {
+          display: block;
+          background: #778898;
+          padding: 5px;
+          margin-bottom: 15px;
+          color: white;
+        }
+
+        .fastCalendar {
+          text-decoration: underline;
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
+
+        .form-field {
+          position: relative;
+          max-width: 215px;
+          display: inline-block;
+          margin-right: 30px;
+
+          .form-label {
+            min-width: auto;
+            position: absolute;
+            left: 25px;
+            padding-top: 11px;
+          }
+
+          .calendar_img {
+            position: absolute;
+            top: 8px;
+            right: 20px;
+            cursor: pointer;
+          }
+
+          .form-custom-input {
+            padding: 15px 70px;
+            positio: relative;
+          }
+        }
+
+        .total-days {
+        }
+      }
+
+      .checkbox-list {
+        column-count: auto;
+      }
+
+      div.checkbox-list__item {
+        display: inline-block;
+        min-width: 240px;
+      }
+
+      li.checkbox-list__item {
+        display: inline-block;
+        margin: 13px 0 13px 40px;
+      }
+    }
+  }
+
+  .total_block {
+    .total {
+      .title {
+        font-size: 16px;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+      }
+
+      span {
+        font-size: 16px;
+        font-weight: 600;
+        color: #4aa846;
+      }
+    }
+  }
+
+  .payment-body-grid__item:hover {
+    background: #fff;
+  }
+
+  .application {
+    padding-bottom: 35px;
+
+    .payment-body-select {
+      border-top: 1px dashed #d7d7d7;
+      border-bottom: 1px dashed #d7d7d7;
+
+      .payment-body-select__title {
+        font-weight: 600;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .subscribe_page .subscribe_wrap .app-block__direction-info .direction__city {
+    width: 130px;
+  }
+
+  .subscribe_page .subscribe_wrap .app-block__direction-info .app-block__direction {
+    width: 465px;
+  }
+
+  .subscribe_page .subscribe_wrap .app-block__direction-info .app-block__class {
+    right: 110px;
+  }
+
+  .subscribe_page {
+
+    .radio-pill {
+      min-height: 170px;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .subscribe_page .subscribe_wrap .app-block__direction-info .app-block__coment {
+    .mobile_cont {
+      display: inline-block;
+    }
+
+    .dscktop_cont {
+      display: none;
+    }
+  }
+
+  .subscribe_page .subscribe_wrap .app-block__direction-info .direction__city {
+    width: 130px;
+  }
+
+  .subscribe_page .subscribe_wrap .app-block__direction-info .app-block__direction {
+    width: 465px;
+  }
+
+  .subscribe_page .add-offer-block .field_wrap:first-child {
+    padding-right: 0;
+  }
+
+  .subscribe_page .subscribe_form,
+  .subscribe_page .total_wrap {
+    border: none;
+  }
+}
+
+@media (max-width: 768px) {
+  #subscribe-addmessage {
+    padding-left: 115px;
+  }
+
+  .subscribe_page .subscribe_wrap .app-block__direction-info .app-block__direction {
+    display: block;
+    width: auto;
+  }
+
+  .subscribe_wrap {
+    .app-block__direction {
+      position: relative;
+    }
+
+    .direction__item {
+      display: inherit;
+      margin-left: 0 !important;
+
+      &.direction__arrow {
+        position: absolute;
+        right: 0;
+        margin: 0 !important;
+        transform: rotate(90deg);
+        top: 22px;
+      }
+    }
+  }
+
+  .subscribe_page .subscribe_wrap .app-block__direction-info {
+    padding: 20px 15px;
+  }
+
+  .subscribe_page .subscribe_wrap .app-block__direction-info .app-block__coment {
+    position: relative;
+    top: 17px;
+  }
+
+  .subscribe_page .subscribe_wrap .app-block__direction-info .app-block__class {
+    top: 36px;
+  }
+
+  .subscribe_page .subscribe_wrap .app-block__direction-info .tools_block {
+    position: relative;
+    top: 17px;
+  }
+
+  .subscribe_page .pay_wrap .add-offer-block div.checkbox-list__item {
+    min-width: 135px;
+  }
+
+  .subscribe_page .add-offer-block.send_place {
+    .form-custom-input {
+      max-width: calc(100% - 140px);
+      padding-left: 45px !important;
+    }
+
+    .flag-container {
+      left: 0 !important;
+    }
+  }
+
+  .subscribe_page .pay_wrap .add-offer-block.calendar .notification-info {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .subscribe_page .pay_wrap .add-offer-block.calendar .form-field {
+    .form-label {
+      padding: 0;
+      background-color: transparent;
+      min-width: 10px !important;
+      top: 11px;
+    }
+
+    .form-custom-input {
+      padding: 15px 60px;
+    }
+  }
+
+  .subscribe_page .pay_wrap .add-offer-block.calendar .form-field {
+    display: flex;
+  }
+
+  .subscribe_page .pay_wrap .total-days {
+    position: absolute;
+    left: 242px;
+    bottom: 9px;
+  }
+
+  .subscribe_page .add-offer-block {
+    position: relative;
+  }
+
+  .subscribe_page .application .payment-body-grid__item-wrap {
+    margin: 0 !important;
+  }
+
+  .subscribe_page .subscribe_block .add-offer-block {
+    .form-field label {
+      min-width: 90px !important;
+    }
+
+    .form-field .select2-container--default .select2-selection--single {
+      padding-left: 90px;
+    }
+
+    .ms-parent.simple-select .ms-choice span {
+      padding-left: 78px;
+    }
+  }
+
+  //.subscribe_page .subscribe_wrap {
+  //  width: calc(100% + 30px);
+  //  margin-left: -15px;
+  //  border-radius: 0;
+  //}
+
+}
+
+@media (max-width: 600px) {
+  .subscribe_page .calendar {
+    .fastLinks {
+      padding-left: 0;
+    }
+  }
+
+  .subscribe_page .application .payment-body-grid__item-wrap {
+    margin: 0 20px !important;
+  }
+
+  .subscribe_page .pay_wrap .add-offer-block.calendar .notification-info {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+}
+
+@media (max-width: 470px) {
+  .subscribe_page .subscribe_wrap .app-block__direction-info .app-block__coment {
+    position: absolute;
+    right: 100px;
+    top: 24px;
+    font-size: 12px;
+  }
+
+  .subscribe_page .subscribe_wrap .app-block__direction-info .app-block__class {
+    top: 47px;
+  }
+
+  .subscribe_page .subscribe_wrap .app-block__direction-info .tools_block .edit, .subscribe_page .subscribe_wrap .app-block__direction-info .tools_block .delete {
+    width: 30px;
+    height: 30px;
+  }
+
+  .subscribe_page .subscribe_wrap .app-block__direction-info .direction__city {
+    font-size: 12px;
+    width: 110px;
+  }
+
+  .subscribe_page .subscribe_wrap .app-block__direction-info .app-block__direction .direction__flag {
+    margin-right: 5px;
+  }
+
+  .content .direction__flag img {
+    height: 22px;
+  }
+
+  .subscribe_page .subscribe_wrap .app-block__direction-info .app-block__class {
+    font-size: 12px;
+    right: 110px;
+  }
+
+  .subscribe_page .pay_wrap .add-offer-block li.checkbox-list__item {
+    display: block;
+  }
+
+  .subscribe_page .application .payment-body-grid__item-wrap {
+    margin: 0 !important;
+  }
+
+  .subscribe_page .calendar {
+    .fastLinks {
+      padding-left: 0 !important;
+      text-align: center;
+    }
+  }
+
+  .subscribe_page .pay_wrap .add-offer-block div.checkbox-list__item {
+    min-width: 100px;
+  }
+
+  .subscribe_page .add-offer-block.send_place .form-custom-input {
+    max-width: calc(100% - 110px);
+
+    &[type="e-mail"] {
+      padding-left: 20px !important;
+    }
+  }
+
+  .subscribe_page .subscribe_wrap .btn_wrap button[type="submit"] {
+    padding: 10px 30px;
+  }
+
+  .subscribe_page .pay_wrap .total-days {
+    left: 230px;
+  }
+}
+
+.select2-container--open .select2-dropdown--below, .select2-container--open .select2-dropdown--above {
+  position: absolute;
+}

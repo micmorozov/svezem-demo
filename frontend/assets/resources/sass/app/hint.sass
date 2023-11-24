@@ -1,0 +1,200 @@
+body
+	.main-container
+		.content
+			h1
+				font-size: 17px
+				line-height: 26px
+				color: #252525
+	.content
+		.gm-style .gm-style-iw
+			width: 415px !important
+			top: 15px !important
+			left: 0px !important
+			background-color: #fff
+			box-shadow: 0 0 34px 1px rgba(40, 42, 47, 0.1)
+			border: 1px solid rgba(62, 153, 221, 0.15)
+			border-radius: 0
+			& + div
+				right: 66px !important
+				top: 32px !important
+				& + img 
+					right: 66px !important
+					top: 32px !important
+		.hint
+			margin-top: -10px
+			background-color: #fff
+			padding: 15px
+			padding: 0
+			margin: 55px 10px 10px 0 !important
+			transition: .3s ease
+			.block_wrap
+				max-height: 200px
+				overflow-y: auto
+				&::-webkit-scrollbar 
+					width: 28px
+					background: #fff
+					border: 1px solid #fff
+				&::-webkit-scrollbar-track 
+					background: #f1f1f1
+				&::-webkit-scrollbar-thumb 
+					background: #fff
+					border: 1px solid #d7d7d7
+					border-radius: 5px
+				&::-webkit-scrollbar-button
+					width: 28px
+					height: 28px
+					background-color: #fff
+					border: 1px solid #d7d7d7
+					border-radius: 5px
+					background-image: url('../img/hint_down.png')
+					background-position: center
+					background-size: 10px
+					background-position: center
+					background-repeat: no-repeat
+					&:decrement
+						background-image: url('../img/hint_up.png')
+			&_block-title
+				font-weight: bold
+				font-size: 16px
+				border-bottom: 1px dashed #d7d7d7
+				padding: 15px 0 10px 20px
+				width: 100%
+				position: absolute
+				top: 0
+			&__block
+				display: -webkit-box
+				display: -ms-flexbox
+				display: flex
+				//margin-bottom: 20px
+				padding-top: 25px
+				padding: 25px 20px 15px 20px
+				border-bottom: 1px dashed #d7d7d7
+				transition: all .3s ease
+				&:hover
+					background-color: rgba(247, 242, 188, 0.5)
+				&:nth-child(1)
+					padding-top: 15px
+			&__logo-block
+				margin-right: 20px
+			&__logo
+				width: 86px
+				height: 86px
+				box-shadow: 0 2px 7px rgba(40, 42, 47, 0.2)
+				border: 1px solid #3e99dd
+				background-color: #ebebeb
+				-webkit-border-radius: 50%
+				-moz-border-radius: 50%
+				-ms-border-radius: 50%
+				border-radius: 50%
+				overflow: hidden
+				background-size: 100% auto
+				background-position: center
+			&__details
+				//margin-bottom: 15px
+				float: left
+			&__info
+				width: 100%
+			&__title
+				color: #a67c52
+				font-size: 16px
+				font-weight: 700
+				width: 110px
+				float: left
+				overflow: hidden
+				text-overflow: ellipsis
+			&__direction
+				width: calc(100% - 135px)
+				display: inline-block
+				margin-left: 25px
+			.direction_duration
+				display: inline-block
+			.direction__arrow img
+				width: 38px
+				height: auto
+				max-width: 38px
+			&__km-hour
+				color: $dark
+				font-size: 16px
+				font-weight: 700
+				display: inline-block
+				margin-left: 20px
+				position: relative
+				top: -4px
+			&__btn
+				color: $blue
+				font-size: 16px
+				font-weight: 700
+				text-decoration: underline
+				text-transform: uppercase
+				&:hover
+					text-decoration: none
+			&__btn-wrap
+				text-align: center
+				padding: 15px 0
+@media( max-width: 480px)
+	body .content .gm-style .gm-style-iw
+		width: calc(100vw - 30px) !important
+		right: 34px
+		left: auto !important
+	body .content .hint__title
+		font-size: 14px
+		width: 90px
+	body .content .hint
+		.hint__km-hour,
+		.direction__city
+			font-size: 14px
+		.hint__km-hour
+			margin-bottom: 10px
+	body .content .gm-style .gm-style-iw + div
+		right: 51px !important
+		& + img 
+			right: 51px !important
+	body .content .hint__direction
+		margin-left: 20px
+		width: calc(100% - 115px)
+	body .content .hint__block
+		margin-right: 0
+	.gmnoprint
+		//display: none
+	.gmnoprint.gm-style-cc + button
+		display: none
+	body .content .hint__block
+		//margin-top: 15px
+@media( max-width: 390px)
+	.hint .block_wrap
+		&::-webkit-scrollbar 
+			width: 5px !important
+			background: #fff
+			border: 1px solid #fff
+		&::-webkit-scrollbar-track 
+			background: #f1f1f1
+		&::-webkit-scrollbar-thumb 
+			background: #fff
+			border: 1px solid #d7d7d7
+			border-radius: 5px
+		&::-webkit-scrollbar-button
+			width: 15px !important
+			height: 15px !important
+			display: none
+			background-color: #fff
+			border: 1px solid #d7d7d7
+			border-radius: 5px
+			background-image: url('http://muhammederdem.com.tr/imagesrdm//arrow-left.png')
+			background-position: center
+			background-size: 18px
+	body .content 
+		.hint__block
+			padding-left: 5px
+			margin-left: 10px
+			padding-right: 0
+		.hint__direction
+			width: calc(100% - 96px)
+			margin-left: 0
+		.hint__km-hour
+			margin-left: 15px
+
+.map_hint
+	display: none
+body .content .hint__title
+	height: 57px
+	overflow: hidden

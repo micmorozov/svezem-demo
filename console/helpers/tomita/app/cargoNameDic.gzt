@@ -1,0 +1,85 @@
+encoding "utf8";
+
+import "base.proto";
+import "articles_base.proto";
+import "cargoName/FactTypes.proto";
+
+TAuxDicArticle "имя_груз"
+{
+    key = { "tomita:cargoName/cargoName.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "груз"
+{
+    key = { "tomita:cargoName/cargo.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "мебель"
+{
+    key = { "dictionary/mebel.txt" type=FILE}
+}
+
+TAuxDicArticle "автомобиль"
+{
+    key = { "dictionary/auto.txt" type=FILE}
+}
+
+TAuxDicArticle "животные"
+{
+    key = { "dictionary/animal.txt" type=FILE}
+}
+
+TAuxDicArticle "бытовая_техника"
+{
+    key = { "dictionary/bittech.txt" type=FILE}
+}
+
+TAuxDicArticle "домашние_вещи"
+{
+    key = { "dictionary/domvesch.txt" type=FILE}
+}
+
+TAuxDicArticle "продукты"
+{
+    key = { "dictionary/food.txt" type=FILE}
+}
+
+TAuxDicArticle "нефтепродукт"
+{
+    key = { "dictionary/oil_product.txt" type=FILE}
+}
+
+TAuxDicArticle "овощи"
+{
+    key = { "dictionary/vegetables.txt" type=FILE}
+}
+
+TAuxDicArticle "рыба"
+{
+    key = { "dictionary/fish.txt" type=FILE}
+}
+
+TAuxDicArticle "дерево"
+{
+    key = { "dictionary/wood.txt" type=FILE}
+}
+
+TAuxDicArticle "оборудование"
+{
+    key = { "dictionary/equipment.txt" type=FILE}
+}
+
+TAuxDicArticle "металлопрокат"
+{
+    key = { "dictionary/metal.txt" type=FILE}
+}
+
+TAuxDicArticle "опасный"
+{
+    key = { "dictionary/danger.txt" type=FILE}
+}
+
+TAuxDicArticle "мусор"
+{
+    key = { "dictionary/garbage.txt" type=FILE}
+}

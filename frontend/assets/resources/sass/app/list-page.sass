@@ -1,0 +1,76 @@
+.list-page
+	padding: 20px 0
+	&__title
+		&__wrap
+			display: flex
+			align-items: center
+			margin-bottom: 35px
+			.content__title
+				margin-bottom: 0
+			.line
+				flex: 1
+				height: 1px
+				border: 1px dashed #d7d7d7
+				margin: 8px 0 0px 20px
+	&__block
+		margin-bottom: 35px
+		ul
+			-webkit-column-count: 3
+			-moz-column-count: 3
+			-o-column-count: 3
+			column-count: 3
+			li
+				margin-bottom: 5px
+				font-size: 16px
+				padding-right: 30px
+				a
+					color: #4b4e58
+					&:hover
+						color: #2a82e6
+						text-decoration: underline
+	&__more-btn
+		text-align: center
+		button
+			text-transform: none
+			padding: 10px 35px
+
+
+@media (max-width: 991px) and (min-width: 768px)
+	.list-page
+		&__block
+			ul
+				-webkit-column-count: 2
+				-moz-column-count: 2
+				-o-column-count: 2
+				column-count: 2
+
+@media (max-width: 767px) and (min-width: 650px)
+	.list-page
+		padding: 20px 15px
+		&__block
+			ul
+				-webkit-column-count: 2
+				-moz-column-count: 2
+				-o-column-count: 2
+				column-count: 2
+
+@media (max-width: 649px) and (min-width: 320px)
+	.list-page
+		padding: 20px 15px
+		&__block
+			ul
+				-webkit-column-count: 1
+				-moz-column-count: 1
+				-o-column-count: 1
+				column-count: 1
+				li
+					margin-bottom: 0
+					font-size: 14px
+					padding-right: 0
+					a
+						display: inline-block
+						width: 100%
+						padding: 7px 10px
+						&:hover
+							color: #fff
+							background-color: #3e99dd

@@ -1,0 +1,586 @@
+encoding "utf8";
+
+import "base.proto";
+import "articles_base.proto";
+import "categories/facttypes.proto";
+
+TAuxDicArticle "числительные"
+{
+    key = { "dictionary/numerical.txt" type=FILE}
+}
+
+TAuxDicArticle "мебель"
+{
+    key = { "dictionary/mebel.txt" type=FILE}
+}
+
+TAuxDicArticle "утилизировать"
+{
+    key = { "dictionary/utilize.txt" type=FILE}
+}
+
+TAuxDicArticle "перевезти"
+{
+    key = { "dictionary/carry.txt" type=FILE}
+}
+
+TAuxDicArticle "аренда"
+{
+    key = { "dictionary/rent.txt" type=FILE}
+}
+
+TAuxDicArticle "автомобиль"
+{
+    key = { "dictionary/auto.txt" type=FILE}
+}
+
+TAuxDicArticle "животные"
+{
+    key = { "dictionary/animal.txt" type=FILE}
+}
+
+TAuxDicArticle "бытовая_техника"
+{
+    key = { "dictionary/bittech.txt" type=FILE}
+}
+
+TAuxDicArticle "домашние_вещи"
+{
+    key = { "dictionary/domvesch.txt" type=FILE}
+}
+
+TAuxDicArticle "продукты"
+{
+    key = { "dictionary/food.txt" type=FILE}
+}
+
+TAuxDicArticle "опасный"
+{
+    key = { "dictionary/danger.txt" type=FILE}
+}
+
+TAuxDicArticle "нефтепродукт"
+{
+    key = { "dictionary/oil_product.txt" type=FILE}
+}
+
+TAuxDicArticle "овощи"
+{
+    key = { "dictionary/vegetables.txt" type=FILE}
+}
+
+TAuxDicArticle "рыба"
+{
+    key = { "dictionary/fish.txt" type=FILE}
+}
+
+TAuxDicArticle "дерево"
+{
+    key = { "dictionary/wood.txt" type=FILE}
+}
+
+TAuxDicArticle "оборудование"
+{
+    key = { "dictionary/equipment.txt" type=FILE}
+}
+
+TAuxDicArticle "металлопрокат"
+{
+    key = { "dictionary/metal.txt" type=FILE}
+}
+
+TAuxDicArticle "мусор"
+{
+    key = { "dictionary/garbage.txt" type=FILE}
+}
+
+TAuxDicArticle "растение"
+{
+    key = { "dictionary/plant.txt" type=FILE}
+}
+
+TAuxDicArticle "стекло"
+{
+    key = { "dictionary/glass.txt" type=FILE}
+}
+
+TAuxDicArticle "категории"
+{
+    key = { "tomita:categories/categories.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_1"
+{
+    key = { "tomita:categories/categories/Category_1.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_3"
+{
+    key = { "tomita:categories/categories/Category_3.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_4"
+{
+    key = { "tomita:categories/categories/Category_4.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_5"
+{
+    key = { "tomita:categories/categories/Category_5.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_6"
+{
+    key = { "tomita:categories/categories/Category_6.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_8"
+{
+    key = { "tomita:categories/categories/Category_8.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_9"
+{
+    key = { "tomita:categories/categories/Category_9.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_12"
+{
+    key = { "tomita:categories/categories/Category_12.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_13"
+{
+    key = { "tomita:categories/categories/Category_13.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_14"
+{
+    key = { "tomita:categories/categories/Category_14.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_16"
+{
+    key = { "tomita:categories/categories/Category_16.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_17"
+{
+    key = { "tomita:categories/categories/Category_17.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_18"
+{
+    key = { "tomita:categories/categories/Category_18.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_19"
+{
+    key = { "tomita:categories/categories/Category_19.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_20"
+{
+    key = { "tomita:categories/categories/Category_20.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_21"
+{
+    key = { "tomita:categories/categories/Category_21.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_22"
+{
+    key = { "tomita:categories/categories/Category_22.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_23"
+{
+    key = { "tomita:categories/categories/Category_23.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_24"
+{
+    key = { "tomita:categories/categories/Category_24.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_25"
+{
+    key = { "tomita:categories/categories/Category_25.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_26"
+{
+    key = { "tomita:categories/categories/Category_26.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_27"
+{
+    key = { "tomita:categories/categories/Category_27.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_28"
+{
+    key = { "tomita:categories/categories/Category_28.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_29"
+{
+    key = { "tomita:categories/categories/Category_29.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_30"
+{
+    key = { "tomita:categories/categories/Category_30.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_31"
+{
+    key = { "tomita:categories/categories/Category_31.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_32"
+{
+    key = { "tomita:categories/categories/Category_32.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_33"
+{
+    key = { "tomita:categories/categories/Category_33.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_34"
+{
+    key = { "tomita:categories/categories/Category_34.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_35"
+{
+    key = { "tomita:categories/categories/Category_35.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_36"
+{
+    key = { "tomita:categories/categories/Category_36.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_37"
+{
+    key = { "tomita:categories/categories/Category_37.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_38"
+{
+    key = { "tomita:categories/categories/Category_38.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_39"
+{
+    key = { "tomita:categories/categories/Category_39.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_40"
+{
+    key = { "tomita:categories/categories/Category_40.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_41"
+{
+    key = { "tomita:categories/categories/Category_41.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_42"
+{
+    key = { "tomita:categories/categories/Category_42.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_43"
+{
+    key = { "tomita:categories/categories/Category_43.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_44"
+{
+    key = { "tomita:categories/categories/Category_44.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_45"
+{
+    key = { "tomita:categories/categories/Category_45.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_46"
+{
+    key = { "tomita:categories/categories/Category_46.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_47"
+{
+    key = { "tomita:categories/categories/Category_47.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_48"
+{
+    key = { "tomita:categories/categories/Category_48.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_49"
+{
+    key = { "tomita:categories/categories/Category_49.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_50"
+{
+    key = { "tomita:categories/categories/Category_50.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_51"
+{
+    key = { "tomita:categories/categories/Category_51.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_52"
+{
+    key = { "tomita:categories/categories/Category_52.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_53"
+{
+    key = { "tomita:categories/categories/Category_53.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_54"
+{
+    key = { "tomita:categories/categories/Category_54.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_55"
+{
+    key = { "tomita:categories/categories/Category_55.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_56"
+{
+    key = { "tomita:categories/categories/Category_56.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_57"
+{
+    key = { "tomita:categories/categories/Category_57.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_58"
+{
+    key = { "tomita:categories/categories/Category_58.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_59"
+{
+    key = { "tomita:categories/categories/Category_59.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_60"
+{
+    key = { "tomita:categories/categories/Category_60.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_61"
+{
+    key = { "tomita:categories/categories/Category_61.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_62"
+{
+    key = { "tomita:categories/categories/Category_62.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_63"
+{
+    key = { "tomita:categories/categories/Category_63.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_64"
+{
+    key = { "tomita:categories/categories/Category_64.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_65"
+{
+    key = { "tomita:categories/categories/Category_65.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_66"
+{
+    key = { "tomita:categories/categories/Category_66.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_67"
+{
+    key = { "tomita:categories/categories/Category_67.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_68"
+{
+    key = { "tomita:categories/categories/Category_68.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_69"
+{
+    key = { "tomita:categories/categories/Category_69.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_70"
+{
+    key = { "tomita:categories/categories/Category_70.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_71"
+{
+    key = { "tomita:categories/categories/Category_71.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_72"
+{
+    key = { "tomita:categories/categories/Category_72.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_73"
+{
+    key = { "tomita:categories/categories/Category_73.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_74"
+{
+    key = { "tomita:categories/categories/Category_74.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_75"
+{
+    key = { "tomita:categories/categories/Category_75.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_76"
+{
+    key = { "tomita:categories/categories/Category_76.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_77"
+{
+    key = { "tomita:categories/categories/Category_77.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_78"
+{
+    key = { "tomita:categories/categories/Category_78.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_79"
+{
+    key = { "tomita:categories/categories/Category_79.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_80"
+{
+    key = { "tomita:categories/categories/Category_80.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_85"
+{
+    key = { "tomita:categories/categories/Category_85.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_86"
+{
+    key = { "tomita:categories/categories/Category_86.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_92"
+{
+    key = { "tomita:categories/categories/Category_92.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_93"
+{
+    key = { "tomita:categories/categories/Category_93.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_94"
+{
+    key = { "tomita:categories/categories/Category_94.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_95"
+{
+    key = { "tomita:categories/categories/Category_95.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_96"
+{
+    key = { "tomita:categories/categories/Category_96.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_97"
+{
+    key = { "tomita:categories/categories/Category_97.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_98"
+{
+    key = { "tomita:categories/categories/Category_98.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_99"
+{
+    key = { "tomita:categories/categories/Category_99.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_100"
+{
+    key = { "tomita:categories/categories/Category_100.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_101"
+{
+    key = { "tomita:categories/categories/Category_101.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_102"
+{
+    key = { "tomita:categories/categories/Category_102.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_103"
+{
+    key = { "tomita:categories/categories/Category_103.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_104"
+{
+    key = { "tomita:categories/categories/Category_104.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_105"
+{
+    key = { "tomita:categories/categories/Category_105.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_106"
+{
+    key = { "tomita:categories/categories/Category_106.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_107"
+{
+    key = { "tomita:categories/categories/Category_107.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_108"
+{
+    key = { "tomita:categories/categories/Category_108.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "cat_109"
+{
+    key = { "tomita:categories/categories/Category_109.cxx" type=CUSTOM }
+}
+

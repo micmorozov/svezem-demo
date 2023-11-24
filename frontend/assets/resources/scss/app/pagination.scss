@@ -1,0 +1,104 @@
+/*	==================================
+ * PAGINATION
+ * ================================== */
+.pagination {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 15px;
+
+  @include br(8px);
+
+  background-color: #ffffff;
+
+  &__item {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    color: $dark;
+
+    @include br(50%);
+
+    text-align: center;
+    padding: 7px 0;
+    margin: 0 5px;
+
+    &:hover,
+    &.active {
+      color: white;
+      background-color: #3e99dd;
+    }
+  }
+}
+
+.per-page {
+  &__wrapper {
+    @include br(4px);
+
+    border: 1px solid #e3e4eb;
+    background-color: #ffffff;
+    position: relative;
+    padding: 7px;
+    cursor: pointer;
+    z-index: 4;
+  }
+
+  .selected {
+    display: block;
+  }
+
+  .dropdown {
+    position: absolute;
+    top: 110%;
+    left: 0;
+    right: 0;
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s ease-in;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: none;
+    padding: 5px 0;
+
+    &__item {
+      padding: 3px 11px;
+
+      &.active {
+        background-color: #e9edf0;
+      }
+
+      &:hover {
+        background-color: $blue;
+        color: #fff;
+      }
+    }
+  }
+}
+
+@media (max-width: $screen-xs-max) {
+  .pagination {
+    float: none !important;
+
+    &__items {
+      margin: 0 10px;
+    }
+  }
+}
+
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+  .pagination {
+    width: auto;
+
+    &__items {
+      margin: 0 10px;
+    }
+  }
+}
+
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+}
+
+@media (min-width: $screen-lg-min) {
+}

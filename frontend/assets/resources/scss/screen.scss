@@ -1,0 +1,48 @@
+$main: #4b4e58;
+$dark: #252525;
+$blue: #2a82e6;
+$red: #ef0e14;
+$beige: #fbf8dd;
+
+$divide-border-color: #dbecf9;
+
+// done by Coderiver.com.ua
+// libs
+@import "lib/base";
+//@import "reset";
+@import "bootstrap-override";
+// app
+@import "common";
+@import "layouts";
+@import "main";
+@import "app/header";
+@import "app/content";
+@import "app/footer";
+//pages
+@import "app/front-page";
+@import "app/pagination";
+@import "app/select";
+@import "app/autocomplete";
+@import "app/tags";
+@import "app/mobile-nav";
+@import "app/carrier";
+@import "app/transport";
+@import "app/list-page";
+@import "app/passing-loads-search";
+@import "app/page-type";
+@import "app/add-offer";
+@import "app/form";
+@import "app/404";
+@import "app/hint";
+@import "app/subscribe";
+@import "app/promo";
+@import "app/custom-checkbox";
+@import "services";
+@import "jump";
+@import "app/loader";
+@import "app/list-style";
+@import "app/vue";
+@import "app/location-form";
+
+//@import select
+//@import bxslider

@@ -1,0 +1,22 @@
+encoding "utf8";
+
+TTextMinerConfig {
+  Dictionary = "categoriesDic.gzt";
+
+  Articles = [
+    { Name = "категории" }
+  ],
+
+  Facts = [
+    { Name = "Category" }
+  ],
+
+  //PrettyOutput = "transport/output/output.html";
+
+  //PrintTree = "transport/output/output_tree.txt";
+
+  Output = {
+    //File = "categories/output/output.json";
+    Format = json;
+  }
+}

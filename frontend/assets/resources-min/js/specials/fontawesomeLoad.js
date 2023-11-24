@@ -1,0 +1,1 @@
+"use strict";document.addEventListener("DOMContentLoaded",function(){var e=document.createElement("link");e.href="https://use.fontawesome.com/releases/v5.8.2/css/all.css",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)});

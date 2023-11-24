@@ -1,0 +1,66 @@
+.passing-loads
+	.route
+		margin: 0 -15px 
+		&__cities
+			justify-content: space-between
+			white-space: nowrap
+			font-size: 14px
+		&__city
+			font-size: 14px
+			margin: 0 20px
+			max-width: 120px
+			display: inline-block
+			vertical-align: middle
+			& + .flag
+				display: inline-block
+				width: 28px
+				img
+					max-width: 100%
+	.route
+		background-color: #d3d4d6
+		+br(8px)
+		overflow: hidden
+		&__map
+			padding: 0
+		&__cities
+			display: -webkit-box
+			display: -ms-flexbox
+			display: flex
+			-webkit-box-align: center
+			-ms-flex-align: center
+			align-items: center
+			color: #252525
+			font-size: 16px
+			font-weight: 400
+			padding: 12px 0
+		&__cities-wrap
+			background-color: #dddee0
+			&.active
+				background-color: #d3d4d6
+		&__city
+			font-weight: 700
+			width: 135px
+			white-space: nowrap
+			overflow: hidden
+			text-overflow: ellipsis
+			margin: 0 35px 0 40px
+		.flag
+			img
+				vertical-align: middle
+		&__distance
+			color: #252525
+			font-size: 16px
+			padding: 14px 0
+			text-align: center
+			cursor: pointer
+			background-color: #dddee0
+			&.active,
+			&:hover
+				background-color: #d3d4d6
+		&__tab-nav
+			cursor: pointer
+	&__route-wrap
+		margin-bottom: 15px
+	.transportation
+		.passing-loads__title-wrap
+			margin-bottom: 0

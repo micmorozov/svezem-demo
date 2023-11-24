@@ -1,0 +1,153 @@
+.promo-payment {
+  &__item {
+    background: #fff;
+    border: 1px solid #DCEAF3;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 12px;
+    box-shadow: #dfdfdf 0 0 10px;
+
+    &-box {
+      min-height: 80px;
+      width: 100%;
+    }
+
+    &-vip {
+      margin-bottom: 16px;
+    }
+
+    &-vip &-box {
+      min-height: auto;
+      padding: 10px 0;
+    }
+
+    &-vip &-info {
+      padding: 16px;
+      position: relative;
+      background: white;
+    }
+
+    &-vip &-price {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      border-top: 1px solid #d7d7d7;
+    }
+
+    &-box-center {
+      label {
+        user-select: none;
+        min-height: 22px;
+      }
+
+    }
+
+    &-price {
+      &-value {
+        display: inline-block;
+      }
+
+      &-count {
+        font-weight: 700;
+        display: inline-block;
+      }
+
+    }
+
+    &-check {
+      padding-top: 20px;
+      min-height: 100%;
+      background: #f8f8f8;
+
+      &-img {
+        height: 130px;
+        border: 1px solid #1568b8;
+        border-radius: 50%;
+        background: white;
+      }
+
+      &-img-label {
+        width: 100%;
+        cursor: pointer;
+        user-select: none;
+
+        img {
+          margin: 10px auto;
+        }
+      }
+    }
+
+    &-info {
+      padding: 16px 16px 30px 50px;
+      background: url(../img/icons/ic-info.png) no-repeat 16px 20px white;
+      min-height: 100%;
+
+      &-title {
+
+      }
+    }
+  }
+}
+
+//@media (max-width: $screen-xs-max) {
+//
+//}
+//
+//@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+//
+//}
+
+@media (max-width: $screen-sm-max) {
+  .promo-payment {
+    &__item {
+      &-vip {
+        .custom-checkbox {
+          padding: 0;
+        }
+      }
+
+      &-vip &-info {
+        min-height: 194px;
+        padding: 16px;
+      }
+
+      &-vip &-box {
+        padding: 0;
+      }
+
+      &-info {
+        padding: 10px 0 10px 50px;
+      }
+
+      &-box {
+        min-height: 50px;
+      }
+
+      &-check {
+        &-img-label {
+          padding: 0;
+        }
+
+        img {
+          height: 100px;
+        }
+      }
+    }
+  }
+
+  .top-border {
+    border-top: 1px solid #DCEAF3;
+  }
+}
+
+//@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+//
+//}
+
+@media (min-width: $screen-lg-min) {
+  .limiter {
+    display: inline-block;
+    width: 230px;
+  }
+}

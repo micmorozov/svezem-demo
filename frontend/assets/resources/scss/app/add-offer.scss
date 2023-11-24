@@ -1,0 +1,129 @@
+.add-offer {
+
+  &-add-img {
+    width: 100%;
+
+    .delete-img {
+      position: absolute;
+      color: #ef0e14;
+      font-size: 18px;
+      right: 0;
+      top: -7px;
+      cursor: pointer;
+      opacity: 0.6;
+      transition: all 0.3s linear;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    &__img {
+      width: 118px;
+      height: 118px;
+      background: #fff no-repeat 50% 50%;
+      background-size: cover;
+      border: 1px solid #4a9ede;
+      border-radius: 50%;
+      box-shadow: 0 2px 7px 0 rgba(40, 42, 47, 0.2);
+      position: relative;
+      cursor: pointer;
+
+      &-wrap {
+        width: 118px;
+        height: 118px;
+        position: relative;
+        margin: 0 auto 25px;
+      }
+    }
+
+    &__btn {
+      background-color: transparent;
+      color: #ef0e14;
+      text-decoration: underline;
+      cursor: pointer;
+      display: block;
+      text-align: center;
+      padding-top: 10px;
+
+      input {
+        display: none;
+      }
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.checkbox-list {
+  input[type='checkbox'] {
+    display: none;
+
+    & + label {
+      font-weight: 400;
+      color: #252525;
+      line-height: 24px;
+      cursor: pointer;
+      user-select: none;
+      margin-bottom: 12px;
+
+      span {
+        display: inline-block;
+        width: 22px;
+        height: 22px;
+        border-radius: 4px;
+        border: 2px solid #e3e4eb;
+        margin-right: 15px;
+        background-color: #FFF;
+        position: relative;
+        cursor: pointer;
+        vertical-align: middle;
+
+        &:before {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translateY(-50%) translateX(-50%);
+          width: 13px;
+          height: 10px;
+          background-image: url("../img/icons/check.png");
+          opacity: 0;
+        }
+      }
+    }
+
+    &:checked {
+      & + label {
+        span {
+          &:before {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  &__more {
+    cursor: pointer;
+    margin-bottom: 15px;
+
+    .text {
+      color: #3e99dd;
+      text-decoration: underline;
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    i {
+      color: #4b4e58;
+      text-decoration: none;
+      margin-right: 5px;
+    }
+  }
+}
